@@ -1,3 +1,19 @@
+/*
+LeetCode 3640 - Trionic Array II
+
+Topics: Arrays, Prefix Sum, DP observation
+Difficulty: Hard
+
+Approach:
+1. Identify increasing → decreasing → increasing pattern.
+2. Fix middle decreasing segment.
+3. Use prefix-style sums to find best left and right extension.
+4. Compute max sum of valid trionic subarray.
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+*/
+
 #include <climits>
 #include <vector>
 using namespace std;
