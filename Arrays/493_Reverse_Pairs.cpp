@@ -1,3 +1,24 @@
+/*
+ * Problem: Reverse Pairs (LeetCode 493)
+ * 
+ * Approach:
+ * - Uses a modified Merge Sort algorithm (Divide & Conquer).
+ * - During the merge step, counts "reverse pairs" where:
+ *      arr[i] > 2 * arr[j]  with i < j.
+ * - The counting is done before merging, using a two-pointer scan
+ *   across the sorted left and right halves.
+ * - After counting, the halves are merged to maintain sorted order.
+ * 
+ * Complexity:
+ * - Time: O(n log n), due to merge sort recursion and linear counting per merge.
+ * - Space: O(n), for temporary arrays during merging.
+ * 
+ * Key Notes:
+ * - Uses long long to avoid overflow when checking arr[i] > 2 * arr[j].
+ * - Ensures correctness by counting cross pairs before merging.
+ * - Optimal solution compared to brute force O(n^2).
+ */
+
 class Solution {
 public:
     // Merge two sorted halves of arr[low..mid] and arr[mid+1..high]
